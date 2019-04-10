@@ -1,0 +1,13 @@
+.select-custom {
+    background-color: black;
+    width: 130px;
+    color: white;
+    font-size: 16px;
+    padding: 0px 11px;
+    text-decoration: none;
+    margin: 4px 2px;
+    border: 1px solid white;
+    border-radius: 11px;
+    letter-spacing: 1px;
+    outline: none;
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Dropdown Multi Select </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="stylesheet" href="bootstrap-multiselect.css" type="text/css"/>
+    <script   src="https://code.jquery.com/jquery-3.2.1.min.js"   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="   crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> 
+    <script type="text/javascript" src="bootstrap-multiselect.js"></script>
+
+</head>
+<dic class="form-container" id="booknow">
+ <div style="text-align:right; font-size:18px; width:95%; margin-top:1%">
+</div>
+<br/>
+<div style="width:70%; margin:0 auto; text-align:center">
+<br/>
+<form autocomplete=off action="javascript:;" id="resetForm" onsubmit="insert_value()">
+    <label>Name</label>
+    <input type="text" class="book-now" id="name"  placeholder="Enter your name" required><br />
+    <label>Email id</label>
+    <input type="email" class="book-now" id="email" placeholder="Enter your email"  required><br />
+    <label>Mobile number</label>
+    <input type="number" id="id" onKeyPress="if(this.value.length==10) return false;" class="book-now" placeholder="Enter your 10 digit mobile number"  required><br />
+    <label>City</label>
+    <select id="city" class="select-custom" id="city" name="city">
+        <option class="options-custom" value="Banglore">Banglore</option>
+        <option class="options-custom" value="Chennai">Chennai</option>
+        <option class="options-custom" value="Hyderabad">Hyderabad</option>
+        <option class="options-custom" value="delhi">Delhi</option>
+        <option class="options-custom" value="dehradun">Dehradun</option>
+        <option class="options-custom" value="mumbai">Mumbai</option>
+    </select><br />
+
+     <h3> choose key Skill </h3>
+         <select id="multiselect" multiple="multiple">
+           <option value="C">c</option>
+           <option value="cpp">cpp</option>
+           <option value="java">java</option>
+           <option value="angular">angular</option>
+           <option value="mongo">mongo</option>
+           <option value="node">node</option>
+           <option value="Perl">Perl</option>
+           <option value="PHP">PHP</option>
+           <option value="Ruby on Rails">Ruby on Rails</option>
+           <option value="Android">Android</option>
+</select>
+
+    <h3>Key Skill with Search</h3>
+          <select id="multiselectwithsearch" multiple="multiple">
+           <option value="C">c</option>
+           <option value="cpp">cpp</option>
+           <option value="java">java</option>
+           <option value="angular">angular</option>
+           <option value="mongo">mongo</option>
+           <option value="node">node</option>
+           <option value="Perl">Perl</option>
+           <option value="PHP">PHP</option>
+           <option value="Ruby on Rails">Ruby on Rails</option>
+           <option value="Android">Android</option>
+</select>
+<br/>
+<br/>
+    <input type="submit"  value="Register Now"><br />
+</form>
+</div>
+</div>
+<script src="main.js"></script> 
+<script>
+$(function() {  
+ $('#multiselect').multiselect();
+
+ $('#multiselectwithsearch').multiselect({
+            includeSelectAllOption: true,
+            enableFiltering: true,
+            enableCaseInsensitiveFiltering: true,
+            filterPlaceholder: 'Search for something...'
+        }); 
+});
+</script>
+
+</html>
